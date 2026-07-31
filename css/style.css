@@ -487,6 +487,8 @@
 		background: url(../images/bg.jpg) no-repeat center top;
 		background-size: cover;
 		background-attachment: fixed;
+		backface-visibility: hidden;
+		transform: translateZ(0);
 		-webkit-backface-visibility: hidden;
 		-webkit-transform: translateZ(0);
 	}

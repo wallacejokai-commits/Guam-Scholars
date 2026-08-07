@@ -3,13 +3,29 @@
 	Phase Shift by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+
+	=====================================================================
+	SHARED LISTING TEMPLATE
+	Used by: scholarships.html, programs.html, comps.html
+	Structure: header/nav -> page (sidebar + content) -> footer -> copyright
+	To reuse for a new listing page:
+	  1. Update <title>, the h2/byline in header.major, and meta description
+	  2. Update the sidebar "On this page" links + intro text
+	  3. Update the four <section id="local|regional|national|international">
+	     blocks with real entries (each entry = one <li> in ul.default)
+	  4. Keep class names identical (4u sidebar / 8u content, ul.default,
+	     ul.actions) so css/style.css applies without changes
+	=====================================================================
 -->
-<html>
+<html lang="en">
   <head>
     <title>Scholarships - Guam Scholars</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta
+      name="description"
+      content="Local, regional, national, and international scholarships available to high school students on Guam."
+    />
+    <meta name="keywords" content="Guam scholarships, high school scholarships, Guam students" />
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.dropotron.min.js"></script>
@@ -34,8 +50,8 @@
         </div>
         <nav id="nav">
           <ul>
-            <li class="active"><a href="index.html">Homepage</a></li>
-            <li><a href="scholarships.html">Scholarships</a></li>
+            <li><a href="index.html">Homepage</a></li>
+            <li class="active"><a href="scholarships.html">Scholarships</a></li>
             <li><a href="programs.html">Programs</a></li>
             <li><a href="comps.html">Competitions</a></li>
             <li><a href="tests.html">Standardized Tests</a></li>
@@ -44,167 +60,183 @@
           </ul>
         </nav>
       </div>
-
-      <!-- Header -->
+      <!-- /Header -->
 
       <!-- Page -->
       <div id="page" class="container">
+        <header class="major">
+          <h2>Scholarships</h2>
+          <span class="byline"
+            >Local, regional, national, and international scholarships open
+            to Guam high school students.</span
+          >
+        </header>
+
         <div class="row">
           <!-- Sidebar -->
           <div id="sidebar" class="4u">
             <section>
               <header class="major">
-                <h2>Etiam malesuada</h2>
+                <h2>On This Page</h2>
               </header>
-              <div class="row half">
-                <section class="6u">
-                  <ul class="default">
-                    <li><a href="#">Donec facilisis tempor</a></li>
-                    <li><a href="#">Nulla convallis cursus</a></li>
-                    <li><a href="#">Integer congue euis</a></li>
-                    <li><a href="#">Venenatis vulputate</a></li>
-                    <li><a href="#">Morbi ligula volutpat</a></li>
-                  </ul>
-                </section>
-                <section class="6u">
-                  <ul class="default small">
-                    <li><a href="#">Donec facilisis tempor</a></li>
-                    <li><a href="#">Nulla convallis cursus</a></li>
-                    <li><a href="#">Integer congue euis</a></li>
-                    <li><a href="#">Venenatis vulputate</a></li>
-                    <li><a href="#">Morbi ligula volutpat</a></li>
-                  </ul>
-                </section>
-              </div>
+              <ul class="default">
+                <li><a href="#local">Local (Guam)</a></li>
+                <li><a href="#regional">Regional (Pacific/Asia)</a></li>
+                <li><a href="#national">National (U.S.)</a></li>
+                <li><a href="#international">International</a></li>
+              </ul>
             </section>
             <section>
               <header class="major">
-                <h2>Mauris vulputate</h2>
+                <h2>Before You Apply</h2>
               </header>
-              <ul class="default">
-                <li><a href="#">Pellentesque lectus gravida blandit</a></li>
-                <li><a href="#">Lorem ipsum consectetuer adipiscing</a></li>
-                <li><a href="#">Phasellus nibh pellentesque congue</a></li>
-                <li><a href="#">Cras vitae metus aliquam pharetra</a></li>
-                <li><a href="#">Maecenas vitae orci feugiat eleifend</a></li>
-                <li><a href="#">Phasellus nibh pellentesque congue</a></li>
-                <li><a href="#">Cras vitae metus aliquam pharetra</a></li>
-              </ul>
+              <p>
+                Always confirm eligibility, deadlines, and required documents
+                directly on the scholarship's official page before applying.
+                Guam students are U.S. citizens/nationals and qualify for most
+                national scholarships open to U.S. territories unless
+                otherwise noted.
+              </p>
             </section>
           </div>
+          <!-- /Sidebar -->
 
           <!-- Content -->
           <div id="content" class="8u skel-cell-important">
-            <section>
+            <section id="local">
               <header class="major">
-                <h2>Left Sidebar</h2>
-                <span class="byline"
-                  >Integer sit amet pede vel arcu aliquet pretium</span
-                >
+                <h3>Local (Guam)</h3>
               </header>
-              <p>
-                Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat.
-                Proin gravida orci porttitor enim accumsan lacinia. Donec
-                condimentum, urna non molestie semper, ligula enim ornare nibh,
-                quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl
-                nibh, iaculis vitae, viverra sit amet, ullamcorper vitae,
-                turpis. Aliquam erat volutpat. Vestibulum pulvinar sed,
-                imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui,
-                faucibus eget, placerat vel, sodales eget, orci. Donec ornare
-                neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed,
-                convallis at, ultricies quis, justo. Donec nonummy magna.
-                Quisque eleifend.
-              </p>
-              <p>
-                Donec nonummy magna quis risus. Quisque eleifend. Maecenas pede
-                nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida
-                orci porttitor enim accumsan lacinia. Donec condimentum, urna
-                non molestie semper, ligula enim ornare nibh, quis laoreet eros
-                quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis
-                vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat
-                volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec,
-                iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget,
-                placerat vel, sodales eget, orci. Donec ornare neque ac sem.
-                Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at,
-                ultricies quis, justo.
-              </p>
-              <p>
-                Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat.
-                Proin gravida orci porttitor enim accumsan lacinia. Donec
-                condimentum, urna non molestie semper, ligula enim ornare nibh,
-                quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl
-                nibh, iaculis vitae, viverra sit amet, ullamcorper vitae,
-                turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed,
-                imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui,
-                faucibus eget, placerat vel, sodales eget, orci. Donec ornare
-                neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed,
-                convallis at, ultricies quis, justo. Donec nonummy magna quis
-                risus. Aliquam lacinia metus ut elit.
-              </p>
+              <ul class="default">
+                <li>
+                  <strong>[Scholarship Name]</strong> &mdash; open to Guam DOE
+                  seniors; deadline: [Month Year].
+                  <a href="#">Learn more</a>
+                </li>
+                <li>
+                  <strong>[Scholarship Name]</strong> &mdash; sponsored by a
+                  local business/foundation; deadline: [Month Year].
+                  <a href="#">Learn more</a>
+                </li>
+              </ul>
+            </section>
+
+            <section id="regional">
+              <header class="major">
+                <h3>Regional (Pacific/Asia)</h3>
+              </header>
+              <ul class="default">
+                <li>
+                  <strong>[Scholarship Name]</strong> &mdash; open to Pacific
+                  Islander students; deadline: [Month Year].
+                  <a href="#">Learn more</a>
+                </li>
+              </ul>
+            </section>
+
+            <section id="national">
+              <header class="major">
+                <h3>National (U.S.)</h3>
+              </header>
+              <ul class="default">
+                <li>
+                  <strong>[Scholarship Name]</strong> &mdash; open to all U.S.
+                  students/territories; deadline: [Month Year].
+                  <a href="#">Learn more</a>
+                </li>
+                <li>
+                  <strong>[Scholarship Name]</strong> &mdash; merit-based,
+                  no essay required; deadline: [Month Year].
+                  <a href="#">Learn more</a>
+                </li>
+              </ul>
+            </section>
+
+            <section id="international">
+              <header class="major">
+                <h3>International</h3>
+              </header>
+              <ul class="default">
+                <li>
+                  <strong>[Scholarship Name]</strong> &mdash; open worldwide,
+                  no U.S. residency required; deadline: [Month Year].
+                  <a href="#">Learn more</a>
+                </li>
+              </ul>
             </section>
           </div>
+          <!-- /Content -->
         </div>
       </div>
       <!-- /Page -->
-
-      <!-- Main -->
-      <div id="main">
-        <div class="container">
-          <div class="row">
-            <!-- Content -->
-            <div class="6u">
-              <section>
-                <ul class="style">
-                  <li class="fa fa-wrench">
-                    <h3>Integer ultrices</h3>
-                    <span
-                      >In posuere eleifend odio. Quisque semper augue mattis
-                      wisi. Maecenas ligula. Pellentesque viverra vulputate
-                      enim. Aliquam erat volutpat. Maecenas condimentum enim
-                      tincidunt risus accumsan.</span
-                    >
-                  </li>
-                  <li class="fa fa-leaf">
-                    <h3>Aliquam luctus</h3>
-                    <span
-                      >In posuere eleifend odio. Quisque semper augue mattis
-                      wisi. Maecenas ligula. Pellentesque viverra vulputate
-                      enim. Aliquam erat volutpat. Maecenas condimentum enim
-                      tincidunt risus accumsan.</span
-                    >
-                  </li>
-                </ul>
-              </section>
-            </div>
-            <div class="6u">
-              <section>
-                <ul class="style">
-                  <li class="fa fa-cogs">
-                    <h3>Integer ultrices</h3>
-                    <span
-                      >In posuere eleifend odio. Quisque semper augue mattis
-                      wisi. Maecenas ligula. Pellentesque viverra vulputate
-                      enim. Aliquam erat volutpat. Maecenas condimentum enim
-                      tincidunt risus accumsan.</span
-                    >
-                  </li>
-                  <li class="fa fa-road">
-                    <h3>Aliquam luctus</h3>
-                    <span
-                      >In posuere eleifend odio. Quisque semper augue mattis
-                      wisi. Maecenas ligula. Pellentesque viverra vulputate
-                      enim. Aliquam erat volutpat. Maecenas condimentum enim
-                      tincidunt risus accumsan.</span
-                    >
-                  </li>
-                </ul>
-              </section>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /Main -->
     </div>
+    <!-- /Wrapper -->
+
+    <!-- Footer -->
+    <div id="footer" class="wrapper style2">
+      <div class="container">
+        <section>
+          <header class="major">
+            <h2>Have a scholarship to suggest?</h2>
+            <span class="byline"
+              >Let us know and we'll add it to the list.</span
+            >
+          </header>
+          <form
+            action="https://formsubmit.co/7d25c7211553e5bca015bad3f92f8651"
+            method="POST"
+          >
+            <input type="text" name="_honey" style="display: none" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="success.html" />
+            <div class="row half">
+              <div class="12u">
+                <input
+                  class="text"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row half">
+              <div class="12u">
+                <input
+                  class="text"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row half">
+              <div class="12u">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Scholarship name, link, and deadline"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <div class="row half">
+              <div class="12u">
+                <ul class="actions">
+                  <li>
+                    <input type="submit" value="Send" class="button alt" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+    <!-- /Footer -->
 
     <!-- Copyright -->
     <div id="copyright">
@@ -229,5 +261,6 @@
         </ul>
       </div>
     </div>
+    <!-- /Copyright -->
   </body>
 </html>

@@ -226,6 +226,8 @@
 			.image.featured img {
 				display: block;
 				width: 100%;
+				object-fit: fill;
+				object-position: center;
 			}
 
 /* Icon */

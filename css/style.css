@@ -512,7 +512,7 @@
 		width: 100%;
 		background: #1a2a0e;
 		color: #fef9e2;
-		padding: 1.5em 1em 1em 1.5em;
+		padding: 1.5em 1.5em 1.5em 1.5em;
 		z-index: 100;
 		display: flex;
 		align-items: flex-start;
@@ -543,7 +543,7 @@
 
 	#nav {
 		cursor: default;
-		margin-top: 1.15em;
+		margin-top: 0.3em;
 	}
 
 	#nav ul li {
@@ -566,6 +566,48 @@
 	#nav ul li a:hover {
 		color: #fff;
 	}
+
+/* Dropdown Menus (dropotron) */
+
+	.dropotron {
+		background: #1a2a0e;
+		min-width: 220px;
+		padding: 0.5em 0;
+		border-radius: 6px;
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+	}
+
+		.dropotron a {
+			display: block;
+			padding: 0.6em 1.5em;
+			color: rgba(255, 255, 255, 0.75);
+			text-decoration: none;
+			font-size: 0.85em;
+			white-space: nowrap;
+			-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+			-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+			-o-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+			-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+			transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		}
+
+			.dropotron a:hover {
+				color: #fff;
+				background: rgba(255, 255, 255, 0.08);
+			}
+
+	#nav ul li.opener > a {
+		position: relative;
+	}
+
+		#nav ul li.opener > a:after {
+			content: "\f107";
+			font-family: FontAwesome;
+			font-weight: normal;
+			margin-left: 0.5em;
+			font-size: 0.85em;
+			opacity: 0.6;
+		}
 
 /* Banner */
 

@@ -227,7 +227,8 @@
 			.image.featured img {
 				display: block;
 				width: 100%;
-				object-fit: fill;
+				height: 220px;
+				object-fit: cover;
 				object-position: center;
 			}
 
@@ -631,6 +632,31 @@
 		background: #fef9e2;
 		text-align: center;
 		border-radius: 0px 0px 6px 6px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		flex-grow: 1;
+	}
+
+		.box p {
+			margin-bottom: 1.5em;
+		}
+
+		.box .button {
+			align-self: center;
+			margin-top: auto;
+		}
+
+/* Home Feature Cards */
+
+	#extra .row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	#extra .row > section {
+		display: flex;
+		flex-direction: column;
 	}
 
 /* Special Text */

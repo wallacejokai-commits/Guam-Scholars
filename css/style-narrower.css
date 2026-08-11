@@ -31,15 +31,16 @@
 /* Header */
 
 	#header {
-		display: none;
+		display: none !important;
 	}
 
 /* Layers */
 
 	#titleBar {
-		background: #000;
+		background: #0b4444;
 		height: 44px;
 		line-height: 44px;
+		border-bottom: 2px solid #146c66;
 	}
 
 		#titleBar .title {
@@ -50,7 +51,7 @@
 			line-height: 44px;
 			letter-spacing: 1px;
 			text-transform: uppercase;
-			color: #fff;
+			color: #f6ecd9;
 			z-index: 1;
 		}
 
@@ -67,46 +68,35 @@
 			z-index: 2;
 		}
 
+			/*
+				Pure-CSS hamburger icon (three bars via box-shadow),
+				replacing the old FontAwesome "\f0c9" glyph + external
+				images/toggle.svg -- neither of which was rendering.
+				This has no font or image dependency, so it always shows.
+			*/
 			#titleBar .toggle:before {
-				content: "\f0c9";
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-transform: none !important;
-			}
-
-			#titleBar .toggle:before {
-				background: none;
-				color: white;
+				content: '';
 				display: block;
-				height: 44px;
-				line-height: 44px;
-				text-align: center;
-				width: 44px;
-				font-size: 1.2em;
+				position: absolute;
+				top: 21px;
+				left: 20px;
+				width: 20px;
+				height: 2px;
+				background: #f6ecd9;
+				box-shadow: 0 6px 0 #f6ecd9, 0 12px 0 #f6ecd9;
 			}
 
 			#titleBar .toggle:after {
-				background: url("images/toggle.svg") 0px 0px no-repeat;
-				content: '';
-				display: block;
-				height: 13px;
-				left: 10px;
-				opacity: 0.75;
-				position: absolute;
-				top: 15px;
-				width: 20px;
+				content: none;
 			}
 
 	#navPanel {
-		background: #000;
+		background: #0b4444;
 	}
 
 		#navPanel .link {
-			border-top: solid 1px rgba(0, 0, 0, 0.15);
-			color: #888;
+			border-top: solid 1px rgba(246, 236, 217, 0.12);
+			color: rgba(246, 236, 217, 0.7);
 			display: block;
 			height: 44px;
 			line-height: 44px;
@@ -118,8 +108,12 @@
 				border-top: 0;
 			}
 
+			#navPanel .link:hover {
+				color: #e08e45;
+			}
+
 			#navPanel .link.depth-0 {
-				color: #fff;
+				color: #f6ecd9;
 			}
 
 			#navPanel .link .indent-1 {

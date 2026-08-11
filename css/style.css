@@ -639,11 +639,15 @@
 	}
 
 		#nav ul li.opener > a:after {
-			content: "\f107";
-			font-family: FontAwesome;
-			font-weight: normal;
+			content: "";
+			display: inline-block;
+			width: 0;
+			height: 0;
 			margin-left: 0.5em;
-			font-size: 0.85em;
+			vertical-align: middle;
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+			border-top: 5px solid currentColor;
 			opacity: 0.6;
 		}
 

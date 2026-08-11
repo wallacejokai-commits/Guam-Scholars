@@ -316,9 +316,10 @@
 				padding-left: 0;
 			}
 
-			ul.icons li span {
-				display: none;
-			}
+			.visually-hidden {
+				position: absolute; width: 1px; height: 1px;
+				margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap;
+				}
 
 			ul.icons li a {
 				display: inline-block;
@@ -822,3 +823,12 @@
 	.darktext {
 		color: #3a3226;
 	}
+
+/* Visually Hidden Skip Link */
+
+	.visually-hidden-skip {
+	position: absolute; left: -999px; top: 0;
+	background: #f6ecd9; color: #0b4444;
+	padding: 1em; z-index: 200;
+	}
+	.visually-hidden-skip:focus { left: 1em; top: 1em; }

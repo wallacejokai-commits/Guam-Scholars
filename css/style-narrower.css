@@ -90,6 +90,15 @@
 				content: none;
 			}
 
+			/*
+				The toggle is now role="button" tabindex="0" so it can
+				receive keyboard focus -- make sure that's visible.
+			*/
+			#titleBar .toggle:focus {
+				outline: 3px solid #e08e45;
+				outline-offset: -3px;
+			}
+
 	#navPanel {
 		background: #0b4444;
 	}
@@ -110,6 +119,11 @@
 
 			#navPanel .link:hover {
 				color: #e08e45;
+			}
+
+			#navPanel .link:focus {
+				outline: 3px solid #e08e45;
+				outline-offset: -3px;
 			}
 
 			#navPanel .link.depth-0 {

@@ -28,7 +28,13 @@
 				titleBar: {
 					breakpoints: 'narrower',
 					height: 44,
-					html: '<span class="toggle" data-action="toggleLayer" data-args="navPanel"></span><span class="title" data-action="copyHTML" data-args="logo"></span>',
+					/*
+						Accessibility: the toggle is now a real, focusable,
+						keyboard-operable control with an accessible name
+						(aria-label) and state (aria-expanded), and it
+						points at the panel it controls (aria-controls).
+					*/
+					html: '<span class="toggle" data-action="toggleLayer" data-args="navPanel" role="button" tabindex="0" aria-label="Open navigation menu" aria-controls="navPanel" aria-expanded="false"></span><span class="title" data-action="copyHTML" data-args="logo"></span>',
 					position: 'top-left',
 					side: 'top',
 					width: '100%'
@@ -62,6 +68,19 @@
 			$('#nav > ul').dropotron({
 				offsetY: -15,
 				hoverDelay: 0
+			});
+
+		// Accessibility: keep the mobile nav toggle's aria-expanded state
+		// in sync with the panel, and let it respond to Enter/Space since
+		// it's a <span> acting as a button (role="button").
+			$(document).on('click keydown', '.toggle[data-action="toggleLayer"]', function(e) {
+				if (e.type === 'keydown' && e.which !== 13 && e.which !== 32) return;
+				if (e.type === 'keydown') e.preventDefault();
+
+				var $toggle = $(this);
+				var expanded = $toggle.attr('aria-expanded') === 'true';
+				$toggle.attr('aria-expanded', String(!expanded));
+				$toggle.attr('aria-label', expanded ? 'Open navigation menu' : 'Close navigation menu');
 			});
 
 	});

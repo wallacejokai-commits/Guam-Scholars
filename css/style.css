@@ -142,6 +142,64 @@
 		padding-top: 3em;
 	}
 
+/* Accessibility utilities */
+
+	/*
+		Visually hides content (e.g. form labels for icon-only links)
+		while keeping it available to screen readers. Do NOT use
+		display:none or visibility:hidden for this -- those remove
+		content from the accessibility tree entirely.
+	*/
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0,0,0,0);
+		white-space: nowrap;
+		border: 0;
+		padding: 0;
+	}
+
+	/* Skip-to-content link: hidden until keyboard-focused */
+	.visually-hidden-skip {
+		position: absolute;
+		left: -999px;
+		top: 0;
+		background: #f6ecd9;
+		color: #0b4444;
+		padding: 1em;
+		z-index: 200;
+	}
+
+		.visually-hidden-skip:focus {
+			left: 1em;
+			top: 1em;
+		}
+
+	/* Visible keyboard focus outline on all interactive elements */
+	a:focus,
+	button:focus,
+	input:focus,
+	textarea:focus,
+	select:focus,
+	.button:focus,
+	[tabindex]:focus {
+		outline: 3px solid #e08e45;
+		outline-offset: 2px;
+	}
+
+	/* Respect reduced-motion preference */
+	@media (prefers-reduced-motion: reduce) {
+		*, *::before, *::after {
+			animation-duration: 0.001ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.001ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+
 /* Form */
 
 	form {
@@ -175,6 +233,8 @@
 		textarea:focus {
 			border-color: #4fa88a;
 			box-shadow: 0 0 0 3px rgba(79, 168, 138, 0.3);
+			outline: 3px solid #e08e45;
+			outline-offset: 2px;
 		}
 
 	textarea {
@@ -270,6 +330,13 @@
 			text-transform: none !important;
 		}
 
+		/*
+			Icon-only link labels: previously display:none (removed the
+			label from screen readers entirely). Now visually-hidden so
+			the accessible name still exists -- combine with class
+			"visually-hidden" on the label markup itself, e.g.
+			<a href="..."><span class="icon fa-twitter"><span class="visually-hidden">Twitter</span></span></a>
+		*/
 		.icon > .label {
 			display: none;
 		}
@@ -315,11 +382,6 @@
 			ul.icons li:first-child {
 				padding-left: 0;
 			}
-
-			.visually-hidden {
-				position: absolute; width: 1px; height: 1px;
-				margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap;
-				}
 
 			ul.icons li a {
 				display: inline-block;
@@ -759,8 +821,13 @@
 /* Copyright */
 
 	#copyright {
-		color: #cfe3da;
-		color: rgba(246, 236, 217, 0.55) !important;
+		/*
+			Original text was rgba(246,236,217,0.55) on #0b4444, which
+			computes to roughly 3.9:1 contrast -- below the WCAG AA
+			4.5:1 minimum for normal-size text. Bumped opacity so it
+			clears the threshold.
+		*/
+		color: rgba(246, 236, 217, 0.75) !important;
 		text-align: center;
 		display: block;
 		padding: 3em 0em;
@@ -770,7 +837,7 @@
 		#copyright a {
 			text-decoration: none;
 			color: #e08e45;
-			color: rgba(224, 142, 69, 0.85) !important;
+			color: rgba(224, 142, 69, 0.95) !important;
 		}
 
 /* Box */
@@ -823,12 +890,3 @@
 	.darktext {
 		color: #3a3226;
 	}
-
-/* Visually Hidden Skip Link */
-
-	.visually-hidden-skip {
-	position: absolute; left: -999px; top: 0;
-	background: #f6ecd9; color: #0b4444;
-	padding: 1em; z-index: 200;
-	}
-	.visually-hidden-skip:focus { left: 1em; top: 1em; }

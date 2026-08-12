@@ -1,22 +1,4 @@
 <!DOCTYPE html>
-<!--
-	Phase Shift by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-
-	=====================================================================
-	SHARED LISTING TEMPLATE
-	Used by: scholarships.html, programs.html, comps.html
-	Structure: header/nav -> page (sidebar + content) -> footer -> copyright
-	To reuse for a new listing page:
-	  1. Update <title>, the h2/byline in header.major, and meta description
-	  2. Update the sidebar "On this page" links + intro text
-	  3. Update the four <section id="local|regional|national|international">
-	     blocks with real entries (each entry = one <li> in ul.default)
-	  4. Keep class names identical (4u sidebar / 8u content, ul.default,
-	     ul.actions) so css/style.css applies without changes
-	=====================================================================
--->
 <html lang="en">
   <head>
     <title>Scholarships - Guam Scholars</title>
@@ -49,10 +31,10 @@
           <h1><a href="index.html">Guam Scholars</a></h1>
           <span class="tag">Opportunity For All</span>
         </div>
-        <nav id="nav">
+        <nav id="nav" aria-label="Main navigation">
           <ul>
             <li><a href="index.html">Homepage</a></li>
-            <li class="active"><a href="scholarships.html">Scholarships</a>
+            <li class="active"><a href="scholarships.html" aria-current="page" aria-haspopup="true">Scholarships</a>
                 <ul>
                   <li><a href="scholarships.html#local">Local (Guam)</a></li>
                   <li><a href="scholarships.html#regional">Regional (Pacific/Asia)</a></li>
@@ -60,7 +42,7 @@
                   <li><a href="scholarships.html#international">International</a></li>
                 </ul>
               </li>
-            <li><a href="programs.html">Programs</a>
+            <li><a href="programs.html" aria-haspopup="true">Programs</a>
                 <ul>
                   <li><a href="programs.html#local">Local (Guam)</a></li>
                   <li><a href="programs.html#regional">Regional (Pacific/Asia)</a></li>
@@ -68,7 +50,7 @@
                   <li><a href="programs.html#international">International</a></li>
                 </ul>
               </li>
-            <li><a href="comps.html">Competitions</a>
+            <li><a href="comps.html" aria-haspopup="true">Competitions</a>
                 <ul>
                   <li><a href="comps.html#local">Local (Guam)</a></li>
                   <li><a href="comps.html#regional">Regional (Pacific/Asia)</a></li>
@@ -76,7 +58,7 @@
                   <li><a href="comps.html#international">International</a></li>
                 </ul>
               </li>
-            <li><a href="tests.html">Standardized Tests</a>
+            <li><a href="tests.html" aria-haspopup="true">Standardized Tests</a>
                 <ul>
                   <li><a href="tests.html#why">Why It Matters</a></li>
                   <li><a href="tests.html#sat">The SAT</a></li>
@@ -85,7 +67,7 @@
                   <li><a href="tests.html#registering">Registering From Guam</a></li>
                 </ul>
               </li>
-            <li><a href="college.html">College/University</a>
+            <li><a href="college.html" aria-haspopup="true">College/University</a>
                 <ul>
                   <li><a href="college.html#on-island">Applying On-Island</a></li>
                   <li><a href="college.html#off-island">Applying Off-Island</a></li>
@@ -94,7 +76,7 @@
                   <li><a href="college.html#timeline">Suggested Timeline</a></li>
                 </ul>
               </li>
-            <li><a href="about-site.html">About Site</a>
+            <li><a href="about-site.html" aria-haspopup="true">About Site</a>
                 <ul>
                   <li><a href="about-site.html#mission">Our Mission</a></li>
                   <li><a href="about-site.html#what-we-cover">What This Site Covers</a></li>
@@ -235,11 +217,12 @@
             action="https://formsubmit.co/beeb459e88ce804e00df9e554a1ee57d"
             method="POST"
           >
-            <input type="text" name="_honey" style="display: none" />
+            <input type="text" name="_honey" style="display: none" tabindex="-1" aria-hidden="true" autocomplete="off" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="http://127.0.0.1:5500/success.html" />
             <div class="row half">
               <div class="12u">
+                <label for="name" class="visually-hidden">Name</label>
                 <input
                   class="text"
                   type="text"
@@ -247,11 +230,13 @@
                   id="name"
                   placeholder="Name"
                   required
+                  aria-required="true"
                 />
               </div>
             </div>
             <div class="row half">
               <div class="12u">
+                <label for="email" class="visually-hidden">Email</label>
                 <input
                   class="text"
                   type="email"
@@ -259,17 +244,20 @@
                   id="email"
                   placeholder="Email"
                   required
+                  aria-required="true"
                 />
               </div>
             </div>
             <div class="row half">
               <div class="12u">
-                <textarea
+                <label for="message" class="visually-hidden">Message</label>
+                  <textarea
                   name="message"
                   id="message"
                   placeholder="Scholarship name, link, and deadline"
                   required
-                ></textarea>
+                  aria-required="true"
+                  ></textarea>
               </div>
             </div>
             <div class="row half">

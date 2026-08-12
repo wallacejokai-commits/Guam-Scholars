@@ -19,7 +19,7 @@
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
   </head>
   <body>
-    <a href="#page" class="visually-hidden-skip">Skip to main content</a>
+    <a href="#banner" class="visually-hidden-skip">Skip to main content</a>
     <!-- Wrapper -->
     <div class="wrapper style1">
       <!-- Header -->
@@ -28,10 +28,10 @@
           <h1><a href="index.html">Guam Scholars</a></h1>
           <span class="tag">Opportunity For All</span>
         </div>
-        <nav id="nav">
+        <nav id="nav" aria-label="Main navigation">
           <ul>
-            <li class="active"><a href="index.html">Homepage</a></li>
-            <li><a href="scholarships.html">Scholarships</a>
+            <li class="active"><a href="index.html" aria-current="page">Homepage</a></li>
+            <li><a href="scholarships.html" aria-haspopup="true">Scholarships</a>
                 <ul>
                   <li><a href="scholarships.html#local">Local (Guam)</a></li>
                   <li><a href="scholarships.html#regional">Regional (Pacific/Asia)</a></li>
@@ -39,7 +39,7 @@
                   <li><a href="scholarships.html#international">International</a></li>
                 </ul>
               </li>
-            <li><a href="programs.html">Programs</a>
+            <li><a href="programs.html" aria-haspopup="true">Programs</a>
                 <ul>
                   <li><a href="programs.html#local">Local (Guam)</a></li>
                   <li><a href="programs.html#regional">Regional (Pacific/Asia)</a></li>
@@ -47,7 +47,7 @@
                   <li><a href="programs.html#international">International</a></li>
                 </ul>
               </li>
-            <li><a href="comps.html">Competitions</a>
+            <li><a href="comps.html" aria-haspopup="true">Competitions</a>
                 <ul>
                   <li><a href="comps.html#local">Local (Guam)</a></li>
                   <li><a href="comps.html#regional">Regional (Pacific/Asia)</a></li>
@@ -55,7 +55,7 @@
                   <li><a href="comps.html#international">International</a></li>
                 </ul>
               </li>
-            <li><a href="tests.html">Standardized Tests</a>
+            <li><a href="tests.html" aria-haspopup="true">Standardized Tests</a>
                 <ul>
                   <li><a href="tests.html#why">Why It Matters</a></li>
                   <li><a href="tests.html#sat">The SAT</a></li>
@@ -64,7 +64,7 @@
                   <li><a href="tests.html#registering">Registering From Guam</a></li>
                 </ul>
               </li>
-            <li><a href="college.html">College/University</a>
+            <li><a href="college.html" aria-haspopup="true">College/University</a>
                 <ul>
                   <li><a href="college.html#on-island">Applying On-Island</a></li>
                   <li><a href="college.html#off-island">Applying Off-Island</a></li>
@@ -73,7 +73,7 @@
                   <li><a href="college.html#timeline">Suggested Timeline</a></li>
                 </ul>
               </li>
-            <li><a href="about-site.html">About Site</a>
+            <li><a href="about-site.html" aria-haspopup="true">About Site</a>
                 <ul>
                   <li><a href="about-site.html#mission">Our Mission</a></li>
                   <li><a href="about-site.html#what-we-cover">What This Site Covers</a></li>
@@ -106,7 +106,7 @@
           <div class="row no-collapse-1">
             <section class="4u">
               <a href="scholarships.html" class="image featured"
-                ><img src="images/scholarships.jpg" alt=""
+                ><img src="images/scholarships.jpg" alt="Students reviewing scholarship application materials"
               /></a>
               <div class="box">
                 <p>
@@ -117,7 +117,7 @@
             </section>
             <section class="4u">
               <a href="programs.html" class="image featured"
-                ><img src="images/apprenticeship-programs.jpg" alt=""
+                ><img src="images/apprenticeship-programs.jpg" alt="Students participating in an apprenticeship or mentorship program"
               /></a>
               <div class="box">
                 <p>Local, Regional, National, and International Programs.</p>
@@ -126,7 +126,7 @@
             </section>
             <section class="4u">
               <a href="comps.html" class="image featured"
-                ><img src="images/competition-analysis.jpg" alt=""
+                ><img src="images/competition-analysis.jpg" alt="Students collaborating during an academic competition"
               /></a>
               <div class="box">
                 <p>
@@ -139,7 +139,7 @@
           <div class="row no-collapse-1">
             <section class="4u">
               <a href="tests.html" class="image featured"
-                ><img src="images/standardized.jpg" alt=""
+                ><img src="images/standardized.jpg" alt="Student taking a standardized test"
               /></a>
               <div class="box">
                 <p>Learn all about Standardized Tests.</p>
@@ -148,7 +148,7 @@
             </section>
             <section class="4u">
               <a href="college.html" class="image featured"
-                ><img src="images/college.jpg" alt=""
+                ><img src="images/college.jpg" alt="College campus building"
               /></a>
               <div class="box">
                 <p>Learn about the College Application Process.</p>
@@ -157,7 +157,7 @@
             </section>
             <section class="4u">
               <a href="about-site.html" class="image featured"
-                ><img src="images/about-site.jpg" alt=""
+                ><img src="images/about-site.jpg" alt="Guam Scholars website logo graphic"
               /></a>
               <div class="box">
                 <p>More about the website.</p>
@@ -185,7 +185,7 @@
             method="POST"
           >
             <!-- Honeypot  -->
-            <input type="text" name="_honey" style="display: none" />
+            <input type="text" name="_honey" style="display: none" tabindex="-1" aria-hidden="true" autocomplete="off" />
 
             <!-- Disable Captcha -->
             <input type="hidden" name="_captcha" value="false" />
@@ -195,6 +195,7 @@
 
             <div class="row half">
               <div class="12u">
+                <label for="name" class="visually-hidden">Name</label>
                 <input
                   class="text"
                   type="text"
@@ -202,11 +203,13 @@
                   id="name"
                   placeholder="Name"
                   required
+                  aria-required="true"
                 />
               </div>
             </div>
             <div class="row half">
               <div class="12u">
+                <label for="email" class="visually-hidden">Email</label>
                 <input
                   class="text"
                   type="email"
@@ -214,16 +217,19 @@
                   id="email"
                   placeholder="Email"
                   required
+                  aria-required="true"
                 />
               </div>
             </div>
             <div class="row half">
               <div class="12u">
+                <label for="message" class="visually-hidden">Message</label>
                 <textarea
                   name="message"
                   id="message"
                   placeholder="Message"
                   required
+                  aria-required="true"
                 ></textarea>
               </div>
             </div>

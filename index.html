@@ -11,24 +11,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.guamscholars.com/PAGE-FILENAME" />
+<!-- Open Graph / Facebook -->
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Guam Scholars" />
-    <meta property="og:url" content="https://www.guamscholars.com/PAGE-FILENAME" />
-    <meta property="og:title" content="SAME AS <title> TEXT" />
-    <meta property="og:description" content="SAME AS meta description" />
-    <meta property="og:image" content="https://www.guamscholars.com/images/about-site.jpg" />
-    <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="SAME AS <title> TEXT" />
-    <meta name="twitter:description" content="SAME AS meta description" />
-    <meta name="twitter:image" content="https://www.guamscholars.com/images/about-site.jpg" />
 
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+TEXT" />
+
+
+<!-- Twitter Card -->
+
+TEXT" />
+
+<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.dropotron.min.js"></script>
     <script src="js/skel.min.js"></script>
@@ -104,7 +98,7 @@
                   <li><a href="about-site.html#accessibility">Accessibility</a></li>
                   <li><a href="about-site.html#disclaimer">Disclaimer</a></li>
                   <li><a href="about-site.html#get-involved">Get Involved</a></li>
-                  <li><a href="about-site.html#who-built-this">Who Built This</a></li>
+                  <li><a href="about-site.html#who-built-this">Why I Built This</a></li>
                   <li><a href="about-site.html#credits">Credits</a></li>
                 </ul>
               </li>
@@ -179,9 +173,6 @@
               </div>
             </section>
             <section class="4u">
-              <a href="about-site.html" class="image featured"
-                ><img src="images/about-site.jpg" alt="Guam Scholars website logo graphic"
-              /></a>
               <div class="box">
                 <p>More about the website.</p>
                 <a href="about-site.html" class="button">About Site</a>
@@ -197,11 +188,8 @@
       <div class="container">
         <section>
           <header class="major">
-            <h2>Want to get involved?</h2>
-            <span class="byline"
-              >If you're interested in contributing to the website or just want
-              to send a nice message, feel free to reach out!</span
-            >
+            <h2>Suggest a resource or report a correction</h2>
+            <span class="byline">Use this form to suggest a resource or report a correction for Guam Scholars.</span>
           </header>
           <form
             action="https://formsubmit.co/beeb459e88ce804e00df9e554a1ee57d" 
@@ -209,30 +197,24 @@
           >
             <!-- Honeypot  -->
             <input type="text" name="_honey" style="display: none" tabindex="-1" aria-hidden="true" autocomplete="off" />
-
-            <!-- Disable Captcha -->
-            <input type="hidden" name="_captcha" value="false" />
-
             <!-- Success Message Link -->
-            <input type="hidden" name="_next" value="http://127.0.0.1:5500/success.html" />
+            <input type="hidden" name="_next" value="https://wallacejokai-commits.github.io/Guam-Scholars/success.html" />
 
             <div class="row half">
               <div class="12u">
-                <label for="name" class="visually-hidden">Name</label>
+                <label for="name" class="visually-hidden">Name (optional)</label>
                 <input
                   class="text"
                   type="text"
                   name="name"
                   id="name"
                   placeholder="Name"
-                  required
-                  aria-required="true"
                 />
               </div>
             </div>
             <div class="row half">
               <div class="12u">
-                <label for="email" class="visually-hidden">Email</label>
+                <label for="email" class="visually-hidden">Email (required for a reply)</label>
                 <input
                   class="text"
                   type="email"
@@ -250,12 +232,13 @@
                 <textarea
                   name="message"
                   id="message"
-                  placeholder="Message"
+                  placeholder="Page, resource link, or correction"
                   required
                   aria-required="true"
                 ></textarea>
               </div>
             </div>
+            <p class="form-notice"><strong>Before you send a message:</strong> Please do not send grades, transcripts, student ID numbers, passwords, medical information, financial information, home addresses, or other sensitive personal information. This form is not monitored for emergencies.</p>
             <div class="row half">
               <div class="12u">
                 <ul class="actions">
@@ -263,7 +246,7 @@
                     <input
                       type="submit"
                       name="submit"
-                      value="Send Message"
+                      value="Send message"
                       class="button alt"
                     />
                   </li>

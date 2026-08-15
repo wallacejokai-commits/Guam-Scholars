@@ -178,6 +178,14 @@
 			top: 1em;
 		}
 
+	/* Contact-form guidance shown to every visitor */
+	.form-notice {
+		margin: 0 0 1.25em 0;
+		font-size: 0.95em;
+		line-height: 1.55;
+		color: #f6ecd9;
+	}
+
 	/* Visible keyboard focus outline on all interactive elements */
 	a:focus,
 	button:focus,

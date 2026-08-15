@@ -631,6 +631,11 @@
 		border-bottom: 2px solid #146c66;
 	}
 
+/* Keep in-page section headings visible below the fixed navigation. */
+	#page section[id] {
+		scroll-margin-top: 11rem;
+	}
+
 /* Logo */
 
 	#logo {

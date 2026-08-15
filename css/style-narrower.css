@@ -43,6 +43,11 @@
 		border-bottom: 2px solid #146c66;
 	}
 
+	/* Keep in-page section headings visible below the mobile title bar. */
+	#page section[id] {
+		scroll-margin-top: 4rem;
+	}
+
 		#titleBar .title {
 			display: block;
 			position: relative;

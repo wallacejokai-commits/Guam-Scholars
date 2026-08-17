@@ -1,0 +1,61 @@
+diff --git a/css/style-narrower.css b/css/style-narrower.css
+index e682aa7..08e2244 100644
+--- a/css/style-narrower.css
++++ b/css/style-narrower.css
+@@ -36,14 +36,12 @@
+ 	}
+ 
+ 	/*
+-		The desktop title-alignment fix (#page header.major h2) uses a
+-		9em left margin to line up with the byline. On mobile the
+-		byline no longer has that margin, so remove it from the title
+-		too, or "Scholarships" etc. would be pushed off-center.
++		No mobile-specific title override needed anymore -- the
++		desktop title is now centered via text-align (see
++		#page > header.major in style.css) instead of a fixed margin,
++		so it already looks correct at every width without a
++		breakpoint-specific reset.
+ 	*/
+-	#page > header.major h2 {
+-		margin-left: 0;
+-	}
+ 
+ 	/*
+ 		Sidebar-before-content order on mobile.
+diff --git a/css/style.css b/css/style.css
+index 6cc2060..5d39c6e 100644
+--- a/css/style.css
++++ b/css/style.css
+@@ -801,16 +801,23 @@
+ 	}
+ 
+ 	/*
+-		Align the big page title (e.g. "Scholarships") with the byline
+-		and last-reviewed text underneath it, which already has a 9em
+-		left margin (see header.major .byline in the Basic section).
+-		Uses a direct-child selector (#page > header.major) so this
+-		only targets the one page-title header and NOT the sidebar's
+-		own "On This Page" / "Before You Apply" section headers,
+-		which are also header.major but nested inside #sidebar.
++		Center the page title, byline, and last-reviewed line as a
++		block, rather than left-aligning them and nudging the title
++		over with a fixed margin to roughly match the byline's fixed
++		margin (the previous approach -- two unrelated fixed numbers
++		that happened to line up, but looked arbitrary and slightly
++		off). Direct-child selector so this only targets the one
++		page-title header, not the sidebar's own section headers
++		("On This Page" / "Before You Apply"), which are also
++		header.major but nested inside #sidebar.
+ 	*/
+-	#page > header.major h2 {
+-		margin-left: 9em;
++	#page > header.major {
++		text-align: center;
++	}
++
++	#page > header.major .byline {
++		margin: 1em auto 0;
++		max-width: 44em;
+ 	}
+ 
+ 	#page a {

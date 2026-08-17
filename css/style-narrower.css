@@ -36,14 +36,12 @@
 	}
 
 	/*
-		The desktop title-alignment fix (#page header.major h2) uses a
-		9em left margin to line up with the byline. On mobile the
-		byline no longer has that margin, so remove it from the title
-		too, or "Scholarships" etc. would be pushed off-center.
+		No mobile-specific title override needed anymore -- the
+		desktop title is now centered via text-align (see
+		#page > header.major in style.css) instead of a fixed margin,
+		so it already looks correct at every width without a
+		breakpoint-specific reset.
 	*/
-	#page > header.major h2 {
-		margin-left: 0;
-	}
 
 	/*
 		Sidebar-before-content order on mobile.

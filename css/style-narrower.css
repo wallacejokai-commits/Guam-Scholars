@@ -22,6 +22,12 @@
 		font-size: 1em;
 	}
 
+	/* Allow content-page introductions and review dates to use the mobile content width. */
+	#page header.major .byline {
+		margin: 1em 0 0;
+		max-width: none;
+	}
+
 /* Form */
 
 	form {

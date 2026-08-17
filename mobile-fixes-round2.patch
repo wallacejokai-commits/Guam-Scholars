@@ -1,0 +1,74 @@
+diff --git a/css/style-narrower.css b/css/style-narrower.css
+index 262247f..d456097 100644
+--- a/css/style-narrower.css
++++ b/css/style-narrower.css
+@@ -22,12 +22,46 @@
+ 		font-size: 1em;
+ 	}
+ 
+-	/* Allow content-page introductions and review dates to use the mobile content width. */
+-	#page header.major .byline {
++	/*
++		Allow content-page introductions and review dates, and the
++		footer's "Suggest a ___" heading/byline above the contact
++		form, to use the full mobile content width instead of the
++		desktop 9em side margins (which caused one/two words per
++		line on narrow screens).
++	*/
++	#page header.major .byline,
++	#footer header.major .byline {
+ 		margin: 1em 0 0;
+ 		max-width: none;
+ 	}
+ 
++	/*
++		The desktop title-alignment fix (#page header.major h2) uses a
++		9em left margin to line up with the byline. On mobile the
++		byline no longer has that margin, so remove it from the title
++		too, or "Scholarships" etc. would be pushed off-center.
++	*/
++	#page header.major h2 {
++		margin-left: 0;
++	}
++
++	/*
++		Sidebar-before-content order on mobile.
++		Skel's row-collapse JS reorders the DOM children of a
++		collapsed .row, which was pushing #sidebar ("On This Page" /
++		"Before You Apply") after #content instead of before it. Force
++		the intended visual order directly with flexbox instead of
++		depending on that reordering behavior.
++	*/
++	#page .row {
++		display: flex;
++		flex-direction: column;
++	}
++
++		#page #sidebar {
++			order: -1;
++		}
++
+ /* Form */
+ 
+ 	form {
+diff --git a/css/style.css b/css/style.css
+index 9eff7a7..74f9729 100644
+--- a/css/style.css
++++ b/css/style.css
+@@ -800,6 +800,16 @@
+ 		color: #145952;
+ 	}
+ 
++	/*
++		Align the big page title (e.g. "Scholarships") with the byline
++		and last-reviewed text underneath it, which already has a 9em
++		left margin (see header.major .byline in the Basic section).
++		Scoped to #page so the homepage banner is unaffected.
++	*/
++	#page header.major h2 {
++		margin-left: 9em;
++	}
++
+ 	#page a {
+ 		color: #146c66;
+ 		text-decoration-color: #4fa88a;

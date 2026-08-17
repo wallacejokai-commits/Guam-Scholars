@@ -800,6 +800,16 @@
 		color: #145952;
 	}
 
+	/*
+		Align the big page title (e.g. "Scholarships") with the byline
+		and last-reviewed text underneath it, which already has a 9em
+		left margin (see header.major .byline in the Basic section).
+		Scoped to #page so the homepage banner is unaffected.
+	*/
+	#page header.major h2 {
+		margin-left: 9em;
+	}
+
 	#page a {
 		color: #146c66;
 		text-decoration-color: #4fa88a;

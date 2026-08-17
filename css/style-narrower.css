@@ -41,7 +41,7 @@
 		byline no longer has that margin, so remove it from the title
 		too, or "Scholarships" etc. would be pushed off-center.
 	*/
-	#page header.major h2 {
+	#page > header.major h2 {
 		margin-left: 0;
 	}
 

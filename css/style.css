@@ -804,9 +804,12 @@
 		Align the big page title (e.g. "Scholarships") with the byline
 		and last-reviewed text underneath it, which already has a 9em
 		left margin (see header.major .byline in the Basic section).
-		Scoped to #page so the homepage banner is unaffected.
+		Uses a direct-child selector (#page > header.major) so this
+		only targets the one page-title header and NOT the sidebar's
+		own "On This Page" / "Before You Apply" section headers,
+		which are also header.major but nested inside #sidebar.
 	*/
-	#page header.major h2 {
+	#page > header.major h2 {
 		margin-left: 9em;
 	}
 

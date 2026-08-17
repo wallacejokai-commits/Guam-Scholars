@@ -8,7 +8,7 @@
 			normal:		{ range: '-1280', href: 'css/style-normal.css', containers: 960, lockViewport: true },
 			narrow:		{ range: '-980', href: 'css/style-narrow.css', containers: '95%', grid: { gutters: 30 } },
 			narrower:	{ range: '-840', href: 'css/style-narrower.css', grid: { gutters: 20, collapse: 1 } },
-			mobile:		{ range: '-640', href: 'css/style-mobile.css', grid: { gutters: 15, collapse: 2 } }
+			mobile:		{ range: '-640', grid: { gutters: 15, collapse: 2 } }
 		}
 	}, {
 		layers: {

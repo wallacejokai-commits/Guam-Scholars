@@ -576,6 +576,19 @@
 				color: #0b4444 !important;
 			}
 
+		/* Dedicated call-to-action for the Support Site: visible without hover. */
+		.button.support-button {
+			background: #0b4444;
+			border: 1px solid #0b4444;
+			color: #ffffff !important;
+		}
+
+			.button.support-button:hover {
+				background: #146c66;
+				border-color: #146c66;
+				color: #ffffff !important;
+			}
+
 		input[type="submit"].fit,
 		input[type="reset"].fit,
 		input[type="button"].fit,

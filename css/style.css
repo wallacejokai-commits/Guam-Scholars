@@ -329,6 +329,19 @@
 				border-radius: 6px 6px 0 0;
 			}
 
+	/* Guam Scholars commissioned homepage graphics */
+
+		#extra .image.featured {
+			background: #f6ecd9;
+			border-radius: 6px 6px 0 0;
+			overflow: hidden;
+		}
+
+			#extra .image.featured img.guam-card-graphic {
+				object-fit: contain;
+				padding: 1.25em;
+			}
+
 /* Icon */
 
 	.icon {
